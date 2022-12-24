@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: whitesmoke;
+}
+
+.app-wrapper {
+  width: 100%;
+  max-width: 650px;
+}
+
+.app-header {
+  height: 70px;
+
+  h1 {
+    font-weight: 500;
+  }
+}
+
+.balance {
+  margin-bottom: 1rem;
+
+  h3 {
+    font-size: 1rem;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+}
+
+.income-expense {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+
+  div {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  .income {
+    span {
+      color: green;
+    }
+  }
+
+  .expense {
+    span {
+      color: crimson;
+    }
+  }
+}
+
+.history-list {
+  h2 {
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-family: 500;
+    border-bottom: solid 1px #333;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &.income {
+        border-right: solid 5px green;
+      }
+
+      &.expense {
+        border-right: solid 5px crimson;
+      }
+    }
+  }
+
+  .history-list__item {
+    display: flex;
+    align-items: center;
+
+    .trash-btn {
+      background: unset;
+      border: unset;
+      margin-right: 1rem;
+      cursor: pointer;
+      color: crimson;
+    }
+    .w-2 {
+      width: 20px;
+    }
+
+    .h-2 {
+      height: 20px;
+    }
+  }
+}
+
+.new-transaction {
+  h2 {
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-family: 500;
+    border-bottom: solid 1px #333;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    input {
+      padding: 0.5rem;
+    }
+
+    button {
+      padding: 0.5rem;
+      background: unset;
+      border: unset;
+      cursor: pointer;
+      background-color: rebeccapurple;
+      color: white;
+      font-size: 1rem;
+      transition: all 0.25s ease;
+
+      &:hover {
+        background-color: rgb(85, 43, 128);
+      }
+    }
+  }
+}
