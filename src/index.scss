@@ -76,7 +76,7 @@ body {
 
   .income {
     span {
-      color: green;
+      color: #008000;
     }
   }
 
@@ -88,12 +88,27 @@ body {
 }
 
 .history-list {
-  h2 {
+  .title-holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 0.5rem 0;
     margin-bottom: 1rem;
     font-size: 1.3rem;
     font-weight: 500;
     border-bottom: solid 2px #e7e7e7;
+
+    h2 {
+      font-size: inherit;
+    }
+
+    button {
+      border: unset;
+      background: unset;
+      cursor: pointer;
+      font-size: inherit;
+      margin-right: 0.5rem;
+    }
   }
 
   ul {
@@ -127,13 +142,6 @@ body {
       margin-right: 1rem;
       cursor: pointer;
       color: crimson;
-    }
-    .w-2 {
-      width: 20px;
-    }
-
-    .h-2 {
-      height: 20px;
     }
   }
 }
@@ -172,4 +180,12 @@ body {
       }
     }
   }
+}
+
+.w-2 {
+  width: 20px;
+}
+
+.h-2 {
+  height: 20px;
 }
