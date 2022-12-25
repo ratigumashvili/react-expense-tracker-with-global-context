@@ -1,13 +1,14 @@
-const TransactionItem = ({ id, text, amount }) => {
-  const handleRemoveItem = (idToDelete) => {
-    console.log(idToDelete);
-  };
+import { useContext } from "react";
+import { GlobalContext } from "../context/GlobalContext";
+import { getStatus, getSign } from "../helpers/helpers";
 
-  const checkAmount = amount < 0 ? "expense" : "income";
+const TransactionItem = ({ id, text, amount }) => {
+  const { deleteTransaction } = useContext(GlobalContext);
+
   return (
-    <li className={checkAmount}>
+    <li className={getStatus(amount)}>
       <div className="history-list__item">
-        <button className="trash-btn" onClick={() => handleRemoveItem(id)}>
+        <button className="trash-btn" onClick={() => deleteTransaction(id)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -25,7 +26,7 @@ const TransactionItem = ({ id, text, amount }) => {
         </button>
         <strong>{text}</strong>
       </div>
-      <span>{amount}</span>
+      <span>{getSign(amount)}</span>
     </li>
   );
 };

@@ -8,12 +8,16 @@ const TransactionList = () => {
 
   return (
     <section className="history-list">
-      <h2>History</h2>
-      <ul>
-        {transactions.map((item) => (
-          <TransactionItem key={item.id} {...item} />
-        ))}
-      </ul>
+      {transactions.length !== 0 && (
+        <>
+          <h2>History</h2>
+          <ul>
+            {transactions.map((item) => (
+              <TransactionItem key={item.id} {...item} />
+            ))}
+          </ul>
+        </>
+      )}
     </section>
   );
 };

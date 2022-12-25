@@ -1,11 +1,24 @@
-import { useState } from "react";
+import uuid from "react-uuid";
+import { useState, useContext } from "react";
+import { GlobalContext } from "../context/GlobalContext";
 
 const NewTransaction = () => {
+  const { addTransaction } = useContext(GlobalContext);
+
   const [text, setText] = useState("");
   const [amount, setAmount] = useState(0);
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
+
+    addTransaction({
+      id: uuid(),
+      text,
+      amount: +amount,
+    });
+
+    setText("");
+    setAmount(0);
   };
   return (
     <section className="new-transaction">
