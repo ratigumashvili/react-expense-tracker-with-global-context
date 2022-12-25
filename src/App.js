@@ -1,17 +1,21 @@
 import Balance from "./components/Balance";
 import Header from "./components/Header";
-import HistoryList from "./components/HistoryList";
+import TransactionList from "./components/TransactionList";
 import IncomeExpense from "./components/IncomeExpense";
 import NewTransaction from "./components/NewTransaction";
+
+import { GlobalProvider } from "./context/GlobalContext";
 
 function App() {
   return (
     <div className="app-wrapper">
       <Header />
-      <Balance />
-      <IncomeExpense />
-      <HistoryList />
-      <NewTransaction />
+      <GlobalProvider>
+        <Balance />
+        <IncomeExpense />
+        <TransactionList />
+        <NewTransaction />
+      </GlobalProvider>
     </div>
   );
 }

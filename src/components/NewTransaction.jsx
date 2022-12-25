@@ -11,7 +11,7 @@ const NewTransaction = () => {
     <section className="new-transaction">
       <h2>New Transaction</h2>
       <form onSubmit={handleSubmitForm}>
-        <label htmlFor="text">Text</label>
+        <label htmlFor="text">Transaction title</label>
         <input
           type="text"
           id="text"

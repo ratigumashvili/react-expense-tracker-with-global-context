@@ -3,11 +3,15 @@ const IncomeExpense = () => {
     <section className="income-expense">
       <div className="income">
         <h2>Income</h2>
-        <span>0</span>
+        <p>
+          $ <span>0</span>
+        </p>
       </div>
       <div className="expense">
         <h2>Expense</h2>
-        <span>0</span>
+        <p>
+          $ <span>0</span>
+        </p>
       </div>
     </section>
   );
