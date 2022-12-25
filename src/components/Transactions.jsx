@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
 import { GlobalContext } from "../context/GlobalContext";
-import TransactionChart from "./TransactionChart";
 
+import TransactionChart from "./TransactionChart";
 import TransactionItem from "./TransactionItem";
 
-const TransactionList = () => {
+const Transactions = () => {
   const [view, setView] = useState("list");
   const { transactions } = useContext(GlobalContext);
 
@@ -20,7 +20,7 @@ const TransactionList = () => {
             <h2>History</h2>
             <button
               onClick={handleChangeView}
-              title={view === "list" ? "Show chart view" : "Show list view"}
+              title={view === "list" ? "Chart view" : "List view"}
             >
               {view === "list" ? (
                 <svg
@@ -75,4 +75,4 @@ const TransactionList = () => {
   );
 };
 
-export default TransactionList;
+export default Transactions;

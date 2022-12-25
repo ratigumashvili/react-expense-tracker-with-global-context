@@ -1,6 +1,6 @@
 import Balance from "./components/Balance";
 import Header from "./components/Header";
-import TransactionList from "./components/TransactionList";
+import Transactions from "./components/Transactions";
 import IncomeExpense from "./components/IncomeExpense";
 import NewTransaction from "./components/NewTransaction";
 
@@ -13,7 +13,7 @@ function App() {
       <GlobalProvider>
         <Balance />
         <IncomeExpense />
-        <TransactionList />
+        <Transactions />
         <NewTransaction />
       </GlobalProvider>
     </div>
